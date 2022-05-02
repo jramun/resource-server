@@ -73,4 +73,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 Nest is [MIT licensed](LICENSE).
 
 `http://localhost:3000/resource/image?name=3.jpg&rotate=180&resizeWidth=100&resizeHeight=100&cropWidth=0&cropHeight=0&cropLeft=0&cropTop=0&quality=0&gray=true`
-`https://www.digitalocean.com/community/tutorials/containerizing-a-node-js-application-for-development-with-docker-compose`
