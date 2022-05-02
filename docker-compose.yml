@@ -29,5 +29,5 @@ services:
       - resource-net
 
 networks:
-  serving-net:
+  resource-net:
     driver: bridge
