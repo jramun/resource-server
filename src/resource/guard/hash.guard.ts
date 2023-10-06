@@ -1,5 +1,5 @@
 import {CanActivate, ExecutionContext, Injectable} from "@nestjs/common";
-import {Hash} from "./hash";
+import {Hash} from "../dto/hash";
 import {ConfigService} from "@nestjs/config";
 import {Observable} from "rxjs";
 

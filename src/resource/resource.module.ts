@@ -1,11 +1,11 @@
 import { Module } from "@nestjs/common";
-import { ResourceController } from "./resource.controller";
-import { ImageService } from "./image.service";
-import { TasksService } from "./tasks.service";
+import { ResourceController } from "./controller/resource.controller";
+import { ImageService } from "./service/conversion/image/image.service";
+import { TasksService } from "./scheduler/tasks.service";
 import { ConfigService } from "@nestjs/config";
-import { DocumentService } from "./document.service";
-import { VideoService } from "./video.service";
-import { VoiceService } from "./voice.service";
+import { DocumentService } from "./service/conversion/document/document.service";
+import { VideoService } from "./service/conversion/video/video.service";
+import { VoiceService } from "./service/conversion/voice/voice.service";
 
 @Module({
   controllers: [ResourceController],

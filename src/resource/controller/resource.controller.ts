@@ -1,11 +1,11 @@
 import { Controller, Get, Query, Res, UseGuards } from "@nestjs/common";
 import { Response } from "express";
-import { ImageService } from "./image.service";
-import { Params } from "./params";
-import { HashGuard } from "./hash.guard";
-import { DocumentService } from "./document.service";
-import { VideoService } from "./video.service";
-import { VoiceService } from "./voice.service";
+import { ImageService } from "../service/conversion/image/image.service";
+import { Params } from "../dto/params";
+import { HashGuard } from "../guard/hash.guard";
+import { DocumentService } from "../service/conversion/document/document.service";
+import { VideoService } from "../service/conversion/video/video.service";
+import { VoiceService } from "../service/conversion/voice/voice.service";
 
 @UseGuards(HashGuard)
 @Controller("resource")
@@ -16,23 +16,6 @@ export class ResourceController {
     private videoService: VideoService,
     private voiceService: VoiceService
   ) {}
-
-  /**
-   * @param name
-   * @param format
-   * @param rotate
-   * @param resize
-   * @param resizeWidth
-   * @param resizeHeight
-   * @param crop
-   * @param cropWidth
-   * @param cropHeight
-   * @param cropLeft
-   * @param cropTop
-   * @param toFormat png,jpg,webp,gif,tiff,
-   * @param gray
-   * @param res
-   */
 
   @Get("/image")
   public async image(
